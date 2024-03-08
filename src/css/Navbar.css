@@ -1,0 +1,37 @@
+.navbar{
+    line-height: 2rem;
+    background-color: #c5c4c483;
+    color: #ffffffe0;
+    height: 2.3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;   
+    align-content: center; 
+}
+.navbar img{
+    height: 90%;
+    width: auto;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+.navbar input{
+    border-radius: 0.5rem;
+    outline: none;
+    border: none;
+    margin-right: 1rem ;
+    padding: 0.5rem 1rem;
+    background-color: rgba(228, 227, 227, 0.329);
+    
+}
+.navbar input::placeholder{
+    color: white;
+}
+.navbar h2{
+    margin-top: 0;
+}
+.search img{
+    height: 1.8rem;
+    width: auto;
+}

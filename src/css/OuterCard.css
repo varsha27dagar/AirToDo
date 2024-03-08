@@ -1,0 +1,35 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin:3rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.upcoming{
+    background-color:#6261613d;
+    height: auto;
+    width: 30%;
+    box-shadow: 2px 3px 5px rgba(128, 128, 128, 0.16);
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+
+}
+.btn{
+    border: none;
+    background-color: #6261613d;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    outline: none;
+    transition: 0.1s;
+}
+.btn:hover{
+  
+    font-size: 1.2rem;
+    
+}

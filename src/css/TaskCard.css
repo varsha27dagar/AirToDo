@@ -1,0 +1,27 @@
+.mmain{
+    display: flex;
+    flex-direction: row;
+}
+.taskcard{
+    background-color:rgba(58, 58, 58, 0.214);
+    height:70px;
+    color: white;
+    margin-right: 0rem;
+    width: 90%;
+    border-radius: 0.1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    overflow: hidden;
+    align-items: center;
+}
+.title{
+    width: 80%;
+}
+.delete button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
