@@ -1,0 +1,42 @@
+
+  /* Style the select box */
+  #education {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #6261613d;
+    padding: 0.8rem 4rem;
+    border: none;
+    border-radius: 0.8rem; 
+    cursor: pointer;
+    color: white;
+    border: none;
+    outline: none;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-right: 10rem;
+  }
+  
+  /* Style the dropdown arrow */
+  .dropdown::after {
+    content: '\25BC'; /* Unicode character for downward arrow */
+    font-size: 12px;
+    color: #555;
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+  }
+  
+  /* Style the dropdown options */
+  #education option {
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 8px 12px;
+  }
+  
+  /* Hover effect on options */
+  #education option:hover {
+    background-color: #e0e0e0;
+  }
+  

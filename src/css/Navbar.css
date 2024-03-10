@@ -23,6 +23,7 @@
     margin-right: 1rem ;
     padding: 0.5rem 1rem;
     background-color: rgba(228, 227, 227, 0.329);
+    color: white;
     
 }
 .navbar input::placeholder{

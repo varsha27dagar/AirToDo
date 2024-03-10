@@ -3,6 +3,6 @@ body{
   background-image: url("https://img.freepik.com/free-photo/background-gradient-lights_23-2149304965.jpg?t=st=1709736936~exp=1709740536~hmac=c8a74d174e83a0a69fd61bb066927e03aaf53fc9fdbeb78725141037a13f993b&w=826");
   background-repeat: no-repeat;
   background-size: cover;
-  height:100vh;
+  height:auto;
   width:auto;
 }

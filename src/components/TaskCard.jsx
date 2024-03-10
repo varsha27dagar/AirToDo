@@ -1,37 +1,37 @@
-import React from "react";
-import "../css/TaskCard.css";
+import React, { useState, useEffect, useContext } from 'react';
+import '../css/TaskCard.css'
+import { GlobalContext } from './GlobalProvider';
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import{useDrag}from'react-dnd'
 function TaskCard(props) {
+  const { todos, setTodos, progress, setProgress, completed, setCompleted,store,setStore } = useContext(GlobalContext);
+  const [isDragging,drag]=useDrag(()=>({
+    type:'card',
+    item:{id:props.id},
+    collect:(monitor)=>({
+      isDragging:!!monitor.isDragging(),
+    }),
+  }));
   function handleDelete(todoId) {
-    axios
-      .delete(`https://jsonplaceholder.typicode.com/todos/${todoId}`)
-      .then((response) => {
         toast.warning('Task Deleted!')
-         // Response data, if needed
-        
-        
-      })
-      .catch((error) => {
-        console.error(
-          `Error deleting todo with ID ${todoId}:`,
-          error.response.data
-        );
-      });
+        props.setValue((prevTodos) => prevTodos.filter((task) => task.id !== todoId));
+        setStore((prevTodos) => prevTodos.filter((task) => task.id !== todoId));
+        console.log('object')
+       
   }
+
   return (
     <>
-    <ToastContainer/>
-      <div className="mmain">
-        <div className="taskcard">
-          <div className="title">
-            {" "}
+    <div className="mmain" ref={drag}>
+    <div className="taskcard">
+    <NavLink className='none' to={'/updatetask/'+props.id }><div className="title"> 
             <h4>{props.title}</h4>
-          </div>
+          </div></NavLink>
           <div className="delete">
-            {" "}
+            
             <button onClick={() => handleDelete(props.id)}>
               <img
                 width="24"
@@ -41,16 +41,10 @@ function TaskCard(props) {
               />
             </button>
           </div>
+          
         </div>
-        <div
-          style={{
-            lineHeight: "1rem",
-            backgroundColor:props.color,
-            marginBottom: "1rem",
-            borderRadius: "0rem",
-            width: "0.2rem",
-          }}
-        ></div>
+        <div style={{backgroundColor:props.color,width:'0.3rem',marginBottom:'1rem'}}></div>
+        
       </div>
     </>
   );
