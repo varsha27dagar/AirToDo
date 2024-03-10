@@ -92,17 +92,17 @@ function OuterCard(props) {
   return (
     <div className='main'>
       <div className='upcoming'>
-        <h4>Upcoming</h4>
+        <h4>Upcoming {todos.length}</h4>
       <ul>{todos.map(todo=>(<TaskCard key={todo.id} title={todo.title} id={todo.id} setValue={setTodos} color={'red'}/>))}</ul>
         <button className='btn' onClick={() => handleClick(3)}>Add</button>
       </div>
       <div className='upcoming' ref={drop}>
-        <h4>In Progress</h4>
+        <h4>In Progress {progress.length}</h4>
         <ul>{progress.map(pro=>(<TaskCard key={pro.id} title={pro.title} id={pro.id} setValue={setProgress} color={'orange'}/>))}</ul>
         <button className='btn' onClick={() => handleClick(2)}>Add</button>
       </div>
       <div className='upcoming' ref={dropp}>
-        <h4>Completed</h4>
+        <h4>Completed {completed.length}</h4>
         <ul>{completed.map(pro=>(<TaskCard key={pro.id} title={pro.title} id={pro.id} setValue={setCompleted} color={'green'}/>))}</ul>
         <button className='btn' onClick={() => handleClick(1)}>Add</button>
       </div>
